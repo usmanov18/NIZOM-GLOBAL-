@@ -1,0 +1,11 @@
+{
+  "name": "NIZOM GLOBAL",
+  "short_name": "NIZOM",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F6F9FC",
+  "theme_color": "#1565C0",
+  "description": "NIZOM GLOBAL distribution ecosystem",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}
