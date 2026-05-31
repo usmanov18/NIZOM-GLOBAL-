@@ -1,0 +1,39 @@
+workflows:
+  flutter-quality:
+    name: NIZOM GLOBAL Flutter Quality
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      vars:
+        APP_ENV: development
+        GOOGLE_MAPS_KEY: Encrypted(...) # Codemagic UI orqali secret qilib kiriting
+    scripts:
+      - name: Bootstrap missing platform files
+        script: |
+          chmod +x tools/bootstrap_flutter_platforms.sh tools/run_quality_cycle.sh
+          tools/bootstrap_flutter_platforms.sh
+      - name: Install dependencies
+        script: flutter pub get
+      - name: Static repository checks
+        script: |
+          python3 tools/static_check.py
+          python3 tools/targeted_regression_check.py
+      - name: Analyze
+        script: flutter analyze --no-fatal-infos --no-fatal-warnings
+      - name: Tests
+        script: flutter test
+      - name: Android debug build
+        script: flutter build apk --debug --dart-define=APP_ENV=$APP_ENV --dart-define=GOOGLE_MAPS_KEY=$GOOGLE_MAPS_KEY
+    artifacts:
+      - build/**/outputs/**/*.apk
+      - build/**/outputs/**/mapping.txt
+      - flutter_drive.log
+    publishing:
+      email:
+        recipients:
+          - dev@nizomglobal.uz
+        notify:
+          success: true
+          failure: true

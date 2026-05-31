@@ -1,0 +1,6 @@
+
+  // ============ FEEDBACK ============
+  // getIt.registerLazySingleton<FeedbackRemoteDataSource>(() => FeedbackRemoteDataSourceImpl(getIt()));
+  // getIt.registerLazySingleton<FeedbackRepository>(() => FeedbackRepositoryImpl(remoteDataSource: getIt()));
+  // getIt.registerFactory(() => FeedbackBloc(repository: getIt()));
+    

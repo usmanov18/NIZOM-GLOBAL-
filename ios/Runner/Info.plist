@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>NIZOM GLOBAL</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>nizom_global</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Barcode skanerlash va yetkazib berish tasdig'i uchun kamera kerak</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Yetkazib beruvchilar joylashuvini kuzatish uchun lokatsiya kerak</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Yetkazib beruvchilar joylashuvini kuzatish uchun lokatsiya kerak</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Mijozlar manzilini ko'rsatish va marshrut rejalashtirish uchun lokatsiya kerak</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Yetkazib berish tasdig'i uchun rasm yuklash kerak</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	
+	<!-- Deep Link for SSO Callback -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.nizomglobal</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.nizomglobal</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

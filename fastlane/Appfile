@@ -1,0 +1,8 @@
+# Android
+json_key_file("path/to/google-play-key.json")
+package_name("com.nizomglobal")
+
+# iOS
+app_identifier("com.nizomglobal")
+apple_id("admin@nizomglobal.uz")
+team_id("TEAMID")

@@ -1,0 +1,29 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+    - .dart_tool/**
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
+  errors:
+    # Stabilization phase: lints are useful locally but should not block
+    # compile-focused analyzer passes until real backend/platform work lands.
+    todo: ignore
+
+linter:
+  rules:
+    # The current codebase is demo/MVP-heavy; these style rules are relaxed
+    # to keep analyzer focused on real compile/null-safety issues first.
+    avoid_print: false
+    prefer_const_constructors: false
+    prefer_const_declarations: false
+    prefer_const_literals_to_create_immutables: false
+    prefer_final_locals: false
+    always_declare_return_types: false
+    type_annotate_public_apis: false
+    sort_child_properties_last: false
+    use_key_in_widget_constructors: false
+    unawaited_futures: false
